@@ -1,1 +1,54 @@
 @charset "utf-8";
+/*rem 단위 10px 지정 */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
+header {
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 12rem;
+  background-color: #5a87c5;
+  box-shadow: #31517e 0px 1px 4px 2px;
+  box-sizing: border-box;
+}
+.header_wrap {
+  width: 66.66%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 12rem;
+  align-items: center;
+}
+.mv_wrap {
+  top: 12rem;
+  box-sizing: border-box;
+  position: relative;
+}
+.mv_wrap > img {
+  width: 100vw;
+  height: 100%;
+}
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+}
+.slick-prev {
+  left: 0;
+}
+.slick-next {
+  right: 0;
+}
+.gnb {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 400;
+  display: flex;
+}
+.gnb > li {
+  font-family: "NanumSquareNeo-Variable";
+  margin-left: 4rem;
+}

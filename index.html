@@ -8,6 +8,12 @@
     <!-- favicon here -->
     <link rel="icon" href="./src/img/favicon.ico" />
     <link rel="stylesheet" href="./src/css/fonts.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/slick-theme.css" />
     <link rel="stylesheet" href="./src/css/slick.css" />
@@ -17,24 +23,92 @@
     <header>
       <div class="header_wrap">
         <h1>
-          <span hidden>COFFEENIE</span>
+          <span class="sr-only">COFFEENIE</span>
           <a href="#">
             <img src="./src/img/logo.gif" alt="COFFEENIE_logo" />
           </a>
         </h1>
         <ul class="gnb">
-          <li><a href="#">COFFEENIE</a></li>
-          <li><a href="#">PRODUCT</a></li>
-          <li><a href="#">STORES</a></li>
-          <li><a href="#">SERVICE</a></li>
-          <li><a href="#">MEMBERSHIP</a></li>
-          <li><a href="#">FRANCHISE</a></li>
+          <li>
+            <a href="#">COFFEENIE</a>
+          </li>
+          <li>
+            <a href="#">PRODUCT</a>
+          </li>
+          <li>
+            <a href="#">STORES</a>
+          </li>
+          <li>
+            <a href="#">SERVICE</a>
+          </li>
+          <li>
+            <a href="#">MEMBERSHIP</a>
+          </li>
+          <li>
+            <a href="#">FRANCHISE</a>
+          </li>
         </ul>
+        <div class="gnb_depth_2_wrap">
+          <ul class="gnb_depth_2">
+            <li>
+              COFFEENIE
+              <ul class="gnb_depth_3">
+                <li><a href="#">브랜드소개</a></li>
+                <li><a href="#">커피니소식</a></li>
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">제휴문의</a></li>
+                <li><a href="#">오시는길</a></li>
+              </ul>
+            </li>
+            <li>
+              PRODUCT
+              <ul class="gnb_depth_3">
+                <li><a href="#">신제품</a></li>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">푸드&디저트</a></li>
+                <li><a href="#">기타제품</a></li>
+                <li><a href="#">영양성분 안내</a></li>
+              </ul>
+            </li>
+            <li>
+              STORES
+              <ul class="gnb_depth_3">
+                <li><a href="#"> 매장 안내</a></li>
+              </ul>
+            </li>
+            <li>
+              SERVICE
+              <ul class="gnb_depth_3">
+                <li><a href="#"> 렌탈서비스 상담신청</a></li>
+                <li><a href="#"> 커피니 렌탈 서비스</a></li>
+              </ul>
+            </li>
+            <li>
+              MEMBERSHIP
+              <ul class="gnb_depth_3">
+                <li><a href="#"> 멤버스 소개</a></li>
+                <li><a href="#"> 커피:니 카드</a></li>
+                <li><a href="#"> FAQ</a></li>
+                <li><a href="#"> 고객의 소리</a></li>
+              </ul>
+            </li>
+            <li>
+              FRANCHISE
+              <ul class="gnb_depth_3">
+                <li><a href="#"> 가맹개설절차</a></li>
+                <li><a href="#"> 인테리어</a></li>
+                <li><a href="#"> 창업투자비용</a></li>
+                <li><a href="#"> FAQ</a></li>
+                <li><a href="#"> 가맹상담신청</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <section>
       <article>
-        <h2></h2>
+        <h2 class="sr-only">new product</h2>
         <div class="mv_wrap">
           <img src="./src/img/1.jpg" alt="mv_1_img_1" />
           <img src="./src/img/2.jpg" alt="mv_1_img_2" />

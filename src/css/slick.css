@@ -70,7 +70,7 @@
   display: none;
   float: left;
 
-  height: 100%;
+  height: calc(100vh - 120px);
   min-height: 1px;
 }
 [dir="rtl"] .slick-slide {

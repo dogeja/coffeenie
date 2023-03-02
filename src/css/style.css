@@ -60,17 +60,19 @@ header {
 /* mv_1 */
 .mv_wrap {
   top: 0;
-  box-sizing: border-box;
   position: relative;
 }
-.mv_wrap img {
-  width: 100%;
-  height: 100%;
+.mv_wrap > div {
+  height: 100vh;
+}
+
+.slick-list {
+  overflow: hidden;
 }
 
 .slick-arrow {
   position: absolute;
-  top: 50%;
+  top: calc(50vh);
 }
 .slick-prev {
   left: 0;
@@ -83,7 +85,7 @@ header {
   display: flex;
   width: 66.66%;
   margin: 0 auto;
-  padding: calc(50vh - 21rem) 0;
+  padding: calc(50vh - 15rem) 0;
   justify-content: space-between;
 }
 .mv_2_wrap > div {

@@ -15,8 +15,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./src/css/reset.css" />
-    <link rel="stylesheet" href="./src/css/slick-theme.css" />
     <link rel="stylesheet" href="./src/css/slick.css" />
+    <link rel="stylesheet" href="./src/css/slick-theme.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
   </head>
   <body>
@@ -25,24 +25,24 @@
         <h1>
           <span class="sr-only">COFFEENIE</span>
           <a href="#">
-            <img src="./src/img/logo.gif" alt="COFFEENIE_logo" />
+            <img src="./src/img/logo.png" alt="COFFEENIE_logo" />
           </a>
         </h1>
         <ul class="gnb">
           <li>
-            <a href="#">커피:니</a>
+            <a href="#">COFFEENIE</a>
           </li>
           <li>
-            <a href="#">메뉴</a>
+            <a href="#">MENU</a>
           </li>
           <li>
-            <a href="#">멤버십</a>
+            <a href="#">MEMBERSHIP</a>
           </li>
           <li>
-            <a href="#">매장안내</a>
+            <a href="#store">STORE</a>
           </li>
           <li>
-            <a href="#">서비스 & 창업문의</a>
+            <a href="#fc">FRANCHISE</a>
           </li>
         </ul>
       </div>
@@ -52,30 +52,209 @@
         <h2 class="sr-only">new product</h2>
         <div class="mv_wrap">
           <div>
-            <img src="./src/img/1.jpg" alt="mv_1_img_1" />
-          </div>
-          <div>
             <img src="./src/img/2.jpg" alt="mv_1_img_2" />
+            <div>
+              <a href="#" class="more_info_box">자세히보기 +</a>
+            </div>
           </div>
           <div>
             <img src="./src/img/3.jpg" alt="mv_1_img_3" />
+            <div>
+              <a href="#" class="more_info_box">자세히보기 +</a>
+            </div>
+          </div>
+          <div>
+            <img src="./src/img/1.jpg" alt="mv_1_img_1" />
+            <div>
+              <a href="#" class="more_info_box">자세히보기 +</a>
+              <div>
+                복숭아 너무 맛있어, 짱 맛있어, <br />
+                매우 맛있고, 정말 맛있어
+              </div>
+            </div>
           </div>
           <div>
             <img src="./src/img/4.jpg" alt="mv_1_img_4" />
+            <div>
+              <a href="#" class="more_info_box">자세히보기 +</a>
+              <div>커피:니 시그니처 <br />바닐라 브리즈</div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="news">
+          <div class="news_wrap">
+            <span>GRAND OPENING</span>
+            <ul>
+              <li>
+                <div>2023.03.02</div>
+                <a href="#">[OPEN 예정]수유점</a>
+              </li>
+              <li>
+                <div>2023.01.12</div>
+                <a href="#">원광대학교점</a>
+              </li>
+              <li>
+                <div>2022.01.11</div>
+                <a href="#">군산 나운점</a>
+              </li>
+              <li>
+                <div>2022.10.06</div>
+                <a href="#">안양 실내체육관 KGC VIP 라운지</a>
+              </li>
+              <li>
+                <div>2022.09.10</div>
+                <a href="#">전주대점</a>
+              </li>
+              <li>
+                <div>2022.07.19</div>
+                <a href="#">중앙대점</a>
+              </li>
+              <li>
+                <div>2022.04.29</div>
+                <a href="#">평택역점</a>
+              </li>
+              <li>
+                <div>2022.03.17</div>
+                <a href="#">목포역점</a>
+              </li>
+            </ul>
           </div>
         </div>
       </article>
       <article>
         <h2 class="sr-only">STORE & FRANCHISE</h2>
-        <div class="mv_2_wrap">
-          <div></div>
-          <div></div>
+        <div id="store" class="mv_2_wrap">
+          <a href="#">
+            <div class="store_wrap mv_2_content">
+              <div class="store_content">
+                <h3>매장안내</h3>
+                <div>가까운 커피니의 매장을 찾아보세요!</div>
+              </div>
+              <img src="#" alt="coffenie_store" />
+            </div>
+          </a>
+          <a href="#">
+            <div id="fc" class="fc_wrap mv_2_content">
+              <div class="fc_content">
+                <h3>프랜차이즈</h3>
+                <div>프랜차이즈 대출을 지원해 드립니다.</div>
+              </div>
+              <img src="#" alt="franchise" />
+            </div>
+          </a>
         </div>
       </article>
     </section>
+    <aside>
+      <div class="aside_btn"></div>
+      <div class="aside_guide">창업을 도와 드리겠습니다!</div>
+      <div class="franchise">
+        <div class="franchise_info">
+          <img src="./src/img/logo.gif" alt="aside_logo" />
+          <div>
+            <div>가맹문의</div>
+            <div>02.123.4567</div>
+          </div>
+        </div>
+        <div class="submit_form" hidden>
+          <div>🥰감사합니다!🥰</div>
+          <div>빠른 시일 내 <br />답변 드리겠습니다!</div>
+          <div>☎️ 02.123.4567</div>
+        </div>
+        <form class="franchise_form">
+          <label for="name">이름</label>
+          <input
+            class="text_input"
+            required
+            placeholder="이름"
+            type="text"
+            id="name"
+            pattern=".{2,8}"
+            title="2글자 이상, 8글자 이하로 작성해 주세요"
+          />
+          <label for="number">연락처</label>
+          <input
+            class="text_input"
+            required
+            placeholder="연락처(-없이 입력)"
+            type="text"
+            id="number"
+            pattern=".{10,14}"
+            title="10글자 이상, 14글자 이하로 작성해 주세요"
+          />
+          <label for="locate">위치</label>
+          <select required name="locate" id="locate">
+            <option value="">시/도 선택</option>
+            <option value="서울">서울</option>
+            <option value="인천">인천</option>
+            <option value="대전">대전</option>
+            <option value="광주">광주</option>
+            <option value="대구">대구</option>
+            <option value="울산">울산</option>
+            <option value="부산">부산</option>
+            <option value="세종">세종</option>
+            <option value="경기">경기</option>
+            <option value="강원">강원</option>
+            <option value="충남">충남</option>
+            <option value="충북">충북</option>
+            <option value="전남">전남</option>
+            <option value="전북">전북</option>
+            <option value="경남">경남</option>
+            <option value="경북">경북</option>
+            <option value="제주">제주</option>
+          </select>
+          <input required type="checkbox" id="checkbox" />
+          <label for="checkbox">개인정보처리방침에 동의합니다.</label>
+          <button>상담신청</button>
+        </form>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="footer_wrap">
+        <img src="./src/img/footer_logo.gif" alt="footer_logo" />
+        <div class="footer_index">
+          <div>
+            <a href="#">회사소개</a> | <a href="#">인재채용</a> |
+            <span><a href="#">개인정보취급방침</a></span> |
+            <a href="#">이용약관</a> | <a href="#">이메일무단수집거부</a> |
+            <a href="#">제휴문의</a> | <a href="#">고객의소리</a> |
+            <a href="#">공고</a>
+          </div>
+          <div>
+            <address>
+              00000 서울특별시 강남구 논현로 xxx, x층
+              <br />
+              Tel: (02)123-4567 | Fax: (02)234-5678
+            </address>
+            <p>
+              Copyright © <span class="footer_year">2023</span> COFFEENIE. All
+              rights reserved.
+            </p>
+          </div>
+        </div>
+        <div class="sns">
+          <a href="http://www.facebook.com/coffeenie11?ref=stream">
+            <img src="./src/img/icon_social_01.gif" alt="facebook" />
+          </a>
+          <a href="http://twitter.com/coffeeniekorea">
+            <img src="./src/img/icon_social_02.gif" alt="twitter" />
+          </a>
+          <a href="https://blog.naver.com/coffeenie_official">
+            <img src="./src/img/icon_social_03.gif" alt="blog" />
+          </a>
+          <a href="https://www.kicc.co.kr/">
+            <img src="./src/img/icon_social_04.gif" alt="kicc" />
+          </a>
+        </div>
+      </div>
+    </footer>
     <script src="./src/js/jquery-3.6.3.min.js"></script>
     <script src="./src/js/jquery-ui.min.js"></script>
     <script src="./src/js/slick.min.js"></script>
+
     <script src="./src/js/app.js"></script>
   </body>
 </html>

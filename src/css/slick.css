@@ -22,7 +22,7 @@
 
   display: block;
   overflow: hidden;
-
+  height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -69,8 +69,7 @@
 .slick-slide {
   display: none;
   float: left;
-
-  height: calc(100vh - 120px);
+  height: 100vh;
   min-height: 1px;
 }
 [dir="rtl"] .slick-slide {

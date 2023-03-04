@@ -1,4 +1,35 @@
 @charset "utf-8";
+@keyframes invalid {
+  30% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(3px);
+  }
+  56% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes guide {
+  0% {
+    transform: translateX(0);
+  }
+  30% {
+    transform: translateX(3px);
+  }
+  43% {
+    transform: translateX(-1px);
+  }
+  56% {
+    transform: translateX(4px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
 /*rem 단위 10px 지정 */
 html {
   font-size: 62.5%;
@@ -24,72 +55,341 @@ header {
   z-index: 100;
   position: fixed;
   width: 100%;
-  height: 12rem;
+  height: 14rem;
   background-color: transparent;
-  /*  background-color: rgba(90, 135, 197);
-  box-shadow: #31517e 0px 1px 4px 2px; */
   box-sizing: border-box;
 }
 .header_wrap {
+  transition: 0.4s;
   width: 66.66%;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  height: 12rem;
+  height: 14rem;
   align-items: center;
 }
 .gnb {
-  color: white;
   font-size: 1.6rem;
   font-weight: 400;
   display: flex;
 }
 .gnb > li {
-  font-family: "Pretendard-Regular";
+  font-family: "Montserrat";
   position: relative;
-  padding: 3rem;
+  padding: 2.4rem;
   cursor: pointer;
   font-size: 1.8rem;
-  color: rgb(49, 49, 49);
+  color: #386aae;
 }
 .gnb > li:last-child {
   padding-right: 0rem;
-  color: rgba(90, 135, 197);
+  font-weight: 700;
 }
 
 /* mv_1 */
 .mv_wrap {
-  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+  margin: 0 auto;
   position: relative;
 }
+
 .mv_wrap > div {
+  width: 100%;
+}
+.mv_wrap > div > img {
+  width: 100%;
   height: 100vh;
 }
-
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-arrow {
+.mv_wrap .slick-slide > div {
+  font-size: 3.2rem;
+  z-index: 1000;
+  font-weight: 400;
   position: absolute;
-  top: calc(50vh);
-}
-.slick-prev {
-  left: 0;
-}
-.slick-next {
-  right: 0;
-}
-/***************************MV2  *****************************/
-.mv_2_wrap {
+  top: 56vh;
+  color: black;
+  width: fit-content;
+  height: 200px;
+  margin-left: 32rem;
+  line-height: 4rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "GyeonggiBatang";
+}
+.mv_wrap .slick-slide > div > div {
+  border-left: 1px solid rgba(0, 0, 0, 0.7);
+  padding-left: 1.4rem;
+}
+.more_info_box {
+  font-family: "Pretendard-Regular";
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 1.6rem 2.4rem;
+  color: black;
+  line-height: 4rem;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 1.6rem;
+  display: inline;
+  font-size: 2.4rem;
+  text-align: center;
+  transition: 0.4s ease;
+}
+.more_info_box:hover {
+  background-color: rgba(90, 135, 197, 0.35);
+  transform: scale(0.98);
+}
+.more_info_box:active {
+  border: 2px solid transparent;
+  transition: 0.1s;
+  background-color: rgba(90, 135, 197, 1);
+  color: white;
+  transform: scale(0.96);
+}
+/* article 2 */
+.news {
+  position: relative;
+  width: 100%;
+  top: 0rem;
+  height: 30rem;
+  background-color: rgba(90, 135, 197, 1);
+}
+.news_wrap {
   width: 66.66%;
+  height: 100%;
   margin: 0 auto;
-  padding: calc(50vh - 15rem) 0;
+  align-items: center;
   justify-content: space-between;
 }
-.mv_2_wrap > div {
+.news_wrap > ul {
+  font-family: "GmarketSansMedium";
+  box-sizing: border-box;
+  color: white;
+}
+.news_wrap > span {
+  font-family: "Montserrat";
+  color: white;
+  padding: 6rem 0 2rem;
+  font-size: 3.6rem;
+  display: block;
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+.news li {
+  font-family: "Pretendard-Regular";
+  margin: 2.8rem 0;
+  display: flex;
+  font-size: 1.8rem;
   width: 50rem;
-  height: 30rem;
+  justify-content: space-between;
+}
+.news li > div {
+  margin-bottom: 0.8rem;
+}
+
+/***************************MV2  *****************************/
+.mv_2_wrap {
+  padding-top: 10rem;
+  display: flex;
+  width: 66.66%;
+  height: 100vh;
+  margin: 0 auto;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.mv_2_wrap > a {
+  width: 50rem;
+  height: 40rem;
   border: black 2px solid;
+}
+/***************************ASIDE  *************************/
+aside {
+  font-family: "Pretendard-Regular";
+}
+.aside_guide {
+  position: fixed;
+  bottom: 5rem;
+  right: 12rem;
+  font-family: "GmarketSansMedium";
+  font-weight: 900;
+  font-size: 2.4rem;
+  color: #386aae;
+  animation: guide 2.4s ease-in-out infinite;
+  background-color: white;
+  padding: 1rem 1.2rem 0.6rem;
+  border-radius: 10rem;
+  box-shadow: #386aae 0px 3px 2px 0px;
+}
+.aside_btn {
+  background-image: url(../img/chatbot.png);
+  background-size: cover;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 200;
+  width: 72px;
+  height: 72px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.aside_btn:hover {
+  transform: translate(1px, 2px);
+  filter: brightness(0.9);
+}
+.aside_btn:active {
+  transform: scale(0.97);
+  filter: brightness(0.7);
+}
+.franchise {
+  font-family: "Pretendard-Regular";
+  position: fixed;
+  bottom: 6rem;
+  right: 6rem;
+  width: 28rem;
+  border-radius: 0.6rem;
+  box-shadow: rgb(46, 78, 128) 3px 2px 6px 1px;
+  background-color: rgb(202, 226, 247);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  word-break: keep-all;
+}
+.franchise_info {
+  border-radius: 0.6rem 0.6rem 0 0;
+  padding: 1.2rem 0;
+  background-color: rgba(90, 135, 197);
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+.franchise_info > div {
+  padding-top: 1rem;
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+.franchise_info > img {
+  margin: 2.8rem auto 1.2rem;
+}
+.franchise_form {
+  width: 90%;
+  padding: 1.6rem 0;
+}
+label {
+  font-size: 1.8rem;
+  display: block;
+  padding-bottom: 0.6rem;
+}
+label:nth-of-type(4) {
+  display: inline-block;
+}
+.submit_form {
+  padding-top: 4rem;
+  position: absolute;
+  z-index: 100;
+  background-color: rgb(202, 226, 247);
+  top: 13rem;
+  width: 100%;
+  text-align: center;
+  height: 30rem;
+  margin: 0 auto;
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+.submit_form > div {
+  padding: 1rem 3rem;
+  word-break: keep-all;
+}
+.franchise_form > input:not(input:nth-of-type(3)) {
+  font-family: "Pretendard-Regular";
+  font-size: 1.6rem;
+  height: 3.2rem;
+  width: 24rem;
+  margin-bottom: 0.8rem;
+  transition: 0.6s;
+  border: none;
+  padding: 0.6rem;
+}
+.franchise_form > input:focus {
+  background-color: rgba(90, 135, 197, 0.1);
+}
+.franchise_form > input:nth-of-type(3) {
+  height: 2rem;
+  width: 2rem;
+  margin: 1rem 0 1rem;
+  transform: translateY(0.2rem);
+}
+.franchise_form > select {
+  font-family: "Pretendard-Regular";
+  border: none;
+  font-size: 1.6rem;
+  padding-right: 5rem;
+  height: 3.4rem;
+  display: block;
+  margin-bottom: 0.6rem;
+}
+.franchise_form > label:nth-of-type(4) {
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.franchise_form > button {
+  font-size: 1.6rem;
+  margin: 1.4rem auto 1.2rem;
+  width: 100%;
+  color: white;
+  background-color: rgba(90, 135, 197, 1);
+  border: none;
+  height: 4rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.franchise_form > button:hover {
+  background-color: rgb(53, 95, 133);
+  transform: scale(0.99);
+}
+.valid .text_input:invalid {
+  transition: 0.8s;
+  border-color: red;
+  background-color: rgba(255, 0, 0, 0.2);
+  animation: invalid 0.6s ease;
+}
+
+/*********************************FOOTER*********************************/
+footer {
+  width: 100%;
+  background-color: #f6f6f6;
+}
+.footer_wrap {
+  font-family: "Pretendard-Regular";
+  color: #6e6e6e;
+  padding: 6rem 0;
+  width: 66.66%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer_wrap > img {
+  width: fit-content;
+  height: fit-content;
+}
+.footer_index {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.footer_index > div:first-child > span {
+  font-weight: 700;
+  color: rgb(102, 141, 197);
+}
+.sns {
+  display: flex;
+}
+.sns > a:not(a:last-child) {
+  margin-right: 0.6rem;
 }

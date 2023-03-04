@@ -8,14 +8,16 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
   });
-  $(".news_wrap>ul").slick({
+  $(".news_wrap>div>ul").slick({
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 1500,
     speed: 500,
     arrows: false,
     slidesToShow: 4,
     slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
   });
   ///////////////   Responsive web width.callback()//////////////////////
   $(window)

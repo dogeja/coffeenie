@@ -56,8 +56,12 @@ $(document).ready(function () {
     $(".franchise").fadeToggle(500);
     $(".aside_guide").hide(200);
   });
-
+  $(".gnb>li:last-child").on("click", function () {
+    $(".franchise").fadeToggle(500);
+    $(".aside_guide").hide(200);
+  });
   //////////   form handler ///////////
+
   // add valid class after submit form => use inValid style in css
   $("input").on("invalid", function () {
     $(".franchise_form").addClass("valid");

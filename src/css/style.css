@@ -209,7 +209,13 @@ header {
   width: 100%;
   height: 100%;
 }
-
+.store_content > img:last-child {
+  position: absolute;
+  top: 42rem;
+  z-index: 200;
+  left: 48rem;
+  filter: saturate(1.45);
+}
 /***************************MV3  *****************************/
 
 /***************************ASIDE  *************************/

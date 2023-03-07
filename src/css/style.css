@@ -7,6 +7,7 @@ html {
 body {
   font-size: 1.6rem;
 }
+
 /* 접근성 관련 코드 */
 .sr-only {
   border: 0 !important;
@@ -28,6 +29,7 @@ header {
   height: 14rem;
   background-color: transparent;
   box-sizing: border-box;
+  box-shadow: none;
 }
 .header_wrap {
   transition: 0.4s;
@@ -141,14 +143,14 @@ header {
 }
 .news > div:last-child > img {
   animation: 24s linear infinite reverse banner;
-  margin: 6rem 0rem 4rem;
+  margin: 8rem 0rem 4rem;
 }
 .news {
   position: relative;
   width: 100%;
   top: 0rem;
   height: fit-content;
-  background-color: rgba(90, 135, 197, 1);
+  background-color: #5a87c5;
 }
 .news_wrap {
   width: 66.66%;
@@ -212,11 +214,72 @@ header {
 .store_content > img:last-child {
   position: absolute;
   top: 42rem;
-  z-index: 200;
+  z-index: 90;
   left: 48rem;
   filter: saturate(1.45);
 }
 /***************************MV3  *****************************/
+#about {
+  width: 100%;
+
+  cursor: none;
+}
+.about_wrap {
+  height: 90rem;
+  flex-direction: column;
+  display: flex;
+}
+.about_content {
+  border: 2px solid #5a87c5;
+  font-family: "Pretendard-Regular";
+  width: 66.66%;
+  margin: auto;
+  display: flex;
+  padding: 4.8rem 0;
+  justify-content: space-around;
+  align-items: center;
+}
+.about_content > div > div {
+  font-family: "Montserrat";
+  font-size: 3.2rem;
+  line-height: 1.25;
+  font-weight: 400;
+  word-break: keep-all;
+  color: #305488;
+}
+.about_content p {
+  font-family: "Inter";
+  font-size: 1.6rem;
+  word-break: keep-all;
+  line-height: 1.4;
+  margin: 1.4rem 0;
+}
+.about_con_2 {
+  text-align: right;
+  flex-direction: row-reverse;
+}
+.about_con_2 p {
+  font-family: "Pretendard-Regular";
+}
+.about_con_2 > div > div {
+  font-family: "Pretendard-Regular";
+}
+.about_content > img {
+  transition: 0.4s;
+  width: 40%;
+  height: auto;
+}
+
+/***************************MV4  *****************************/
+#membership {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#membership > div {
+  width: 66.66%;
+  margin: 0 auto;
+}
 
 /***************************ASIDE  *************************/
 aside {
@@ -227,7 +290,7 @@ aside {
   position: fixed;
   bottom: 5rem;
   right: 12rem;
-  font-family: "GmarketSansMedium";
+  font-family: "Pretendard-Regular";
   font-weight: 900;
   font-size: 2.4rem;
   color: #386aae;
@@ -390,4 +453,10 @@ footer {
 }
 .sns > a:not(a:last-child) {
   margin-right: 0.6rem;
+}
+/* etc */
+.highlight {
+  background-color: #ffda23;
+  padding: 0.2rem 0.4rem;
+  box-sizing: border-box;
 }

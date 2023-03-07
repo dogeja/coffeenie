@@ -28,22 +28,15 @@ $(document).ready(function () {
           const currentScrollValue = document.documentElement.scrollTop;
           if (currentScrollValue > 100) {
             //   header transparent to blue
-            $("header").css("backgroundColor", "#ffffff");
-            $("header").css("height", "100px");
-            $(".gnb>li:not(li:last-child)").css("fontWeight", "400");
-            $(".gnb>li:last-child").css("color", "#386aae");
-            $(".header_wrap").css("height", "100px");
+            headerOver100();
           } else {
-            $("header").css("backgroundColor", "transparent");
-            $("header").css("height", "140px");
-            $(".gnb>li").css("fontWeight", "700");
-            $(".gnb>li:last-child").css("color", "white");
-            $(".header_wrap").css("height", "140px");
+            headerUnder100();
           }
         });
       }
     })
     .resize();
+
   //   if form submit
   $(".franchise_form").submit(function (e) {
     e.preventDefault();
@@ -99,4 +92,22 @@ $(document).ready(function () {
   //footer copyright section year change
   const year = new Date().getFullYear();
   $(".footer_year").text(`${year}`);
+
+  /******************* function section ******************/
+  const headerOver100 = () => {
+    $("header").css("backgroundColor", "#ffffff");
+    $("header").css("height", "100px");
+    $("header").css("boxShadow", "#536c8f 0px 0px 5px 2px");
+    $(".gnb>li:not(li:last-child)").css("fontWeight", "400");
+    $(".gnb>li:last-child").css("color", "#386aae");
+    $(".header_wrap").css("height", "100px");
+  };
+  const headerUnder100 = () => {
+    $("header").css("backgroundColor", "transparent");
+    $("header").css("height", "140px");
+    $("header").css("boxShadow", "none");
+    $(".gnb>li").css("fontWeight", "700");
+    $(".gnb>li:last-child").css("color", "#305488");
+    $(".header_wrap").css("height", "140px");
+  };
 });

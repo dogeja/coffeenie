@@ -82,3 +82,27 @@
   background-color: rgba(255, 0, 0, 0.2);
   animation: invalid 0.6s ease;
 }
+.about_content > img:hover {
+  transform: translateY(-2px);
+}
+/*  article 3~4  mouseEvent */
+#mouseEvent {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-radius: 35%;
+  z-index: 9999;
+  left: 50%;
+  top: 50%;
+  pointer-events: none;
+  transition: transform 0.4s;
+  background-color: #f2ce18;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+}
+#mouseEvent.hover {
+  transform: scale(5);
+  border-radius: 50%;
+  opacity: 1;
+}

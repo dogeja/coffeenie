@@ -10,7 +10,10 @@
   font-family: "AKIRA";
   src: url("../fonts/Akira-Expanded-Demo.woff");
 }
-
+@font-face {
+  font-family: "Inter";
+  src: url("../css/fonts/Inter-VariableFont_slnt\wght.ttf");
+}
 @font-face {
   font-family: "NanumSquareNeo-Variable";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2")

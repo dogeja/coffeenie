@@ -145,49 +145,57 @@
           </div>
         </div>
       </article>
-      <article>
-        <h2 class="sr-only">MEMBERSHIP</h2>
-        <a href="#">
-          <div id="membership" class="membership_wrap">
-            <div class="membership_content">
-              <h3>멤버십</h3>
-              <div>멤버십 혜택을 받아보세요!</div>
-            </div>
-            <img src="#" alt="membership" />
-          </div>
-        </a>
-      </article>
+
       <article>
         <h2 class="sr-only">ABOUT-COFFEENIE</h2>
 
         <div id="about" class="about_wrap">
-          <div class="about_content">
-            <div class="about_con_1">
-              <h3>Everyone needs a "THIRD PLACE" to take a break.</h3>
+          <div class="about_content about_con_1">
+            <div>
+              <div>
+                Everyone needs a <br />
+                <span class="highlight">"THIRD PLACE"</span> to take a break.
+              </div>
               <p>
                 Everyone needs a "Third Place" to relax, <br />
                 talk and get things done.
               </p>
             </div>
-            <img src="#" alt="coffeenie" />
+            <img src="./src/img/logo_img.png" alt="coffeenie_logo" />
           </div>
-          <div class="about_content">
-            <div class="about_con_2">
-              <h3>
-                커피:니에서 합리적인 가격으로 향기로운 커피, 다양한 음료와
-                디저트를 마음껏 즐기세요.
-              </h3>
+          <div class="about_content about_con_2">
+            <div>
+              <div>
+                커피:니에서 합리적인 가격으로 향기로운 커피,<br />
+                다양한 음료와 디저트를 마음껏 즐기세요.
+              </div>
               <p>
-                커피:니는 누구나 언제든지 자유롭게 들려서 맛의 즐거움을 느끼며
-                시간을 보낼 수 있도록 좋은 커피와 다양한 음료를 부담없는 가격에
-                제공하고 있으며, 꾸준한 메뉴 개발과 관리를 통해 고객의 지속적인
-                만족을 위해 노력하고 있습니다.
+                커피:니는 누구나 언제든지 자유롭게 들려서<br />
+                맛의 즐거움을 느끼며 시간을 보낼 수 있도록 <br />
+                좋은 커피와 다양한 음료를 부담없는 가격에 제공하고 있으며,
+                <br />
+                꾸준한 메뉴 개발과 관리를 통해 고객의 지속적인 만족을 위해
+                노력하고 있습니다.
               </p>
             </div>
-            <img src="#" alt="coffeenie" />
+            <img src="./src/img/coffeenieBg.png" alt="coffeenie_bg" />
           </div>
         </div>
       </article>
+      <article>
+        <h2 class="sr-only">MEMBERSHIP</h2>
+        <div id="membership" class="membership_wrap">
+          <div class="membership_content">
+            <div>멤버십 혜택을 받아보세요!</div>
+            <img src="#" alt="membership" />
+          </div>
+          <div class="application">
+            <div>커피니를 모바일에서 만나보세요!</div>
+            <img src="#" alt="mobile_app" />
+          </div>
+        </div>
+      </article>
+      <div id="mouseEvent"></div>
     </section>
     <aside>
       <div class="aside_btn"></div>
@@ -296,7 +304,6 @@
     <script src="./src/js/jquery-3.6.3.min.js"></script>
     <script src="./src/js/jquery-ui.min.js"></script>
     <script src="./src/js/slick.min.js"></script>
-
     <script
       type="text/javascript"
       src="//dapi.kakao.com/v2/maps/sdk.js?appkey=86c83cc458d103b4323a6f549dd24268&libraries=services,clusterer,drawing"
@@ -307,5 +314,6 @@
     ></script>
     <script src="./src/js/map.js"></script>
     <script src="./src/js/app.js"></script>
+    <script src="./src/js/mouseEvent.js"></script>
   </body>
 </html>

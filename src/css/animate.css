@@ -82,8 +82,15 @@
   background-color: rgba(255, 0, 0, 0.2);
   animation: invalid 0.6s ease;
 }
-.about_content > img:hover {
-  transform: translateY(-2px);
+.about_con_2 > img:hover {
+  transform: scale(0.98);
+}
+.about_con_1 > img:hover {
+  transform: rotateY(20deg);
+}
+.about_content > div > div:hover {
+  box-sizing: border-box;
+  background-color: rgba(242, 206, 24, 0.85);
 }
 /*  article 3~4  mouseEvent */
 #mouseEvent {

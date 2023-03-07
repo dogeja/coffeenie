@@ -221,64 +221,83 @@ header {
 /***************************MV3  *****************************/
 #about {
   width: 100%;
-
+  height: fit-content;
+  position: relative;
   cursor: none;
 }
 .about_wrap {
   height: 90rem;
   flex-direction: column;
   display: flex;
+  background-color: #f6f6f6;
 }
 .about_content {
-  border: 2px solid #5a87c5;
+  position: relative;
+  box-sizing: border-box;
   font-family: "Pretendard-Regular";
   width: 66.66%;
-  margin: auto;
+  margin: 1.6rem auto;
   display: flex;
   padding: 4.8rem 0;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .about_content > div > div {
   font-family: "Montserrat";
   font-size: 3.2rem;
-  line-height: 1.25;
+  line-height: 1.3;
   font-weight: 400;
   word-break: keep-all;
-  color: #305488;
+  transition: 0.6s;
 }
 .about_content p {
-  font-family: "Inter";
-  font-size: 1.6rem;
+  font-family: "Montserrat";
+  font-size: 1.8rem;
   word-break: keep-all;
   line-height: 1.4;
-  margin: 1.4rem 0;
+  margin: 1.8rem 0 0;
+  color: black;
+}
+.about_con_1 {
+  margin-top: 6rem;
+  border: none;
+  color: #305488;
+  flex-basis: 1;
 }
 .about_con_2 {
-  text-align: right;
   flex-direction: row-reverse;
+  flex-basis: 4;
+  margin-bottom: 6rem;
 }
 .about_con_2 p {
   font-family: "Pretendard-Regular";
+  font-weight: 400;
 }
 .about_con_2 > div > div {
   font-family: "Pretendard-Regular";
+  color: #305488;
+  text-align: right;
 }
 .about_content > img {
   transition: 0.4s;
-  width: 40%;
+  max-width: 35%;
   height: auto;
 }
 
 /***************************MV4  *****************************/
 #membership {
+  position: relative;
   width: 100%;
   display: flex;
+  padding-top: 12rem;
   flex-direction: column;
+  height: 90rem;
 }
 #membership > div {
   width: 66.66%;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 /***************************ASIDE  *************************/
@@ -456,7 +475,9 @@ footer {
 }
 /* etc */
 .highlight {
-  background-color: #ffda23;
+  background-color: rgba(242, 206, 24, 0.85);
+  color: rgb(0, 0, 0);
+  font-weight: 700;
   padding: 0.2rem 0.4rem;
   box-sizing: border-box;
 }

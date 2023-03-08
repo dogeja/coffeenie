@@ -33,6 +33,24 @@ $(document).ready(function () {
             headerUnder100();
           }
         });
+      } else if (window.innerWidth <= 1024) {
+        $(window).scroll(function () {
+          const currentScrollValue = document.documentElement.scrollTop;
+
+          if (currentScrollValue > 100) {
+            headerOver100();
+          } else {
+            headerUnder100();
+          }
+        });
+        $("body").on("touchstart", function (e) {
+          const currentTouchValue = e.originalEvent.touches[0].pageY;
+          if (currentTouchValue > 1200) {
+            headerOver100();
+          } else if (currentTouchValue <= 1200) {
+            headerUnder100();
+          }
+        });
       }
     })
     .resize();

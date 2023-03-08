@@ -22,4 +22,9 @@ $(document).ready(function () {
   };
   $("#about>div").on("mouseenter", mouseEnter);
   $("#about>div").on("mouseleave", mouseLeave);
+  $(".application").on("mouseenter", mouseEnter);
+  $(".application").on("mouseleave", mouseLeave);
+
+  // aniview
+  $(".aniview").AniView();
 });

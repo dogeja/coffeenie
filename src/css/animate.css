@@ -54,7 +54,7 @@
 }
 /* hover & Active */
 .more_info_box:hover {
-  background-color: rgba(90, 135, 197, 0.35);
+  background-color: rgba(255, 255, 255, 0.55);
   transform: scale(0.98);
 }
 .more_info_box:active {
@@ -109,7 +109,7 @@
   mix-blend-mode: multiply;
 }
 #mouseEvent.hover {
-  transform: scale(5);
+  transform: scale(4);
   border-radius: 50%;
   opacity: 1;
 }

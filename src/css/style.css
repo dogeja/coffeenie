@@ -149,7 +149,7 @@ header {
   position: relative;
   width: 100%;
   top: 0rem;
-  height: fit-content;
+  height: 100vh;
   background-color: #5a87c5;
 }
 .news_wrap {
@@ -221,12 +221,12 @@ header {
 /***************************MV3  *****************************/
 #about {
   width: 100%;
-  height: fit-content;
+  height: 100vh;
   position: relative;
   cursor: none;
 }
 .about_wrap {
-  height: 90rem;
+  height: 100%;
   flex-direction: column;
   display: flex;
   background-color: #f6f6f6;
@@ -238,7 +238,7 @@ header {
   width: 66.66%;
   margin: 1.6rem auto;
   display: flex;
-  padding: 1.6rem 0;
+  padding: 2.4rem 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -290,7 +290,8 @@ header {
   display: flex;
   padding-top: 12rem;
   flex-direction: column;
-  height: 90rem;
+  height: 78rem;
+  background-color: #5a87c5;
 }
 #membership > div {
   width: 66.66%;

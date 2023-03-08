@@ -20,6 +20,6 @@ $(document).ready(function () {
   const mouseLeave = () => {
     mouseCursor.removeClass("hover");
   };
-  $("#about>div").on("mouseenter", mouseEnter);
-  $("#about>div").on("mouseleave", mouseLeave);
+  $("#about").on("mouseenter", mouseEnter);
+  $("#about").on("mouseleave", mouseLeave);
 });

@@ -238,7 +238,7 @@ header {
   width: 66.66%;
   margin: 1.6rem auto;
   display: flex;
-  padding: 4.8rem 0;
+  padding: 1.6rem 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -255,18 +255,16 @@ header {
   font-size: 1.8rem;
   word-break: keep-all;
   line-height: 1.4;
-  margin: 1.8rem 0 0;
+  margin: 2rem 0 0;
   color: black;
 }
 .about_con_1 {
   margin-top: 6rem;
   border: none;
   color: #305488;
-  flex-basis: 1;
 }
 .about_con_2 {
   flex-direction: row-reverse;
-  flex-basis: 4;
   margin-bottom: 6rem;
 }
 .about_con_2 p {
@@ -281,6 +279,7 @@ header {
 .about_content > img {
   transition: 0.4s;
   max-width: 35%;
+  width: auto;
   height: auto;
 }
 

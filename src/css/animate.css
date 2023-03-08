@@ -106,7 +106,7 @@
   transition: transform 0.4s;
   background-color: #f2ce18;
   opacity: 0.2;
-  mix-blend-mode: overlay;
+  mix-blend-mode: multiply;
 }
 #mouseEvent.hover {
   transform: scale(5);

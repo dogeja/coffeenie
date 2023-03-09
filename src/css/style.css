@@ -318,7 +318,9 @@ header {
   line-height: 1.4;
   font-size: 1.8rem;
 }
-
+.application > p > span {
+  font-weight: 700;
+}
 .anchor_wrap {
   margin-top: 2.4rem;
   display: flex;
@@ -508,7 +510,7 @@ footer {
 }
 .footer_index > div:first-child > span {
   font-weight: 700;
-  color: rgb(102, 141, 197);
+  color: #305488;
 }
 .sns {
   display: flex;

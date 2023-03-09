@@ -66,6 +66,11 @@
     transform: translateY(0);
   }
 }
+::selection {
+  background-color: #f2ce18;
+  color: black;
+}
+
 /* hover & Active */
 .gnb > li:hover {
   color: #f2ce18;
@@ -110,7 +115,7 @@
 }
 .about_content > div > div:hover {
   box-sizing: border-box;
-  background-color: rgba(242, 206, 24, 0.85);
+  background-color: rgba(242, 206, 24, 1);
 }
 /*  article 3~4  mouseEvent */
 #mouseEvent {

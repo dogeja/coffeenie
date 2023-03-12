@@ -8,22 +8,23 @@ $(document).ready(function () {
     arrows: false,
     dots: true,
   });
-  $(".news_wrap>div>ul").slick({
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 1500,
-    speed: 500,
-    arrows: false,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    vertical: true,
-    verticalSwiping: true,
-  });
+
   ///////////////   Responsive web width.callback()//////////////////////
   $(window)
     .resize(function () {
       //////////////DeskTop Size/////////////////
       if (window.innerWidth > 1024) {
+        $(".news_wrap>div>ul").slick({
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 1500,
+          speed: 500,
+          arrows: false,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          vertical: true,
+          verticalSwiping: true,
+        });
         $(window).scroll(function () {
           const currentScrollValue = document.documentElement.scrollTop;
           if (currentScrollValue > 100) {
@@ -33,7 +34,8 @@ $(document).ready(function () {
             headerUnder100();
           }
         });
-      } else if (window.innerWidth <= 1024) {
+        //////////////Tablet Size/////////////////
+      } else if (window.innerWidth <= 1024 && window.innerWidth > 768) {
         $(window).scroll(function () {
           const currentScrollValue = document.documentElement.scrollTop;
 
@@ -43,14 +45,27 @@ $(document).ready(function () {
             headerUnder100();
           }
         });
-        $("body").on("touchstart", function (e) {
-          const currentTouchValue = e.originalEvent.touches[0].pageY;
-          if (currentTouchValue > 1200) {
-            headerOver100();
-          } else if (currentTouchValue <= 1200) {
-            headerUnder100();
-          }
+        //////////////Mobile Size/////////////////
+      } else if (window.innerWidth <= 768) {
+        $(".news_wrap>div>ul").slick({
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 1500,
+          speed: 500,
+          arrows: false,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          vertical: false,
         });
+        $("header").css("backgroundColor", "#ffffff");
+        $("header").css("height", "100px");
+        $(".header_wrap").css("height", "100px");
+        $(".gnb_mobile_ul").hide();
+        $(".gnb_mobile")
+          .off("click")
+          .on("click", function () {
+            $(".gnb_mobile_ul").slideToggle(300);
+          });
       }
     })
     .resize();
@@ -64,13 +79,15 @@ $(document).ready(function () {
   /**************aside bar *******************/
   $(".franchise").hide();
   $(".aside_btn").on("click", function () {
-    $(".franchise").fadeToggle(500);
-    $(".aside_guide").hide(200);
+    franchiseToggle();
   });
   $(".gnb>li:last-child").on("click", function () {
-    $(".franchise").fadeToggle(500);
-    $(".aside_guide").hide(200);
+    franchiseToggle();
   });
+  $(".gnb_mobile_ul>li:last-child").on("click", function () {
+    franchiseToggle();
+  });
+
   //////////   form handler ///////////
 
   // add valid class after submit form => use inValid style in css
@@ -115,7 +132,6 @@ $(document).ready(function () {
   const headerOver100 = () => {
     $("header").css("backgroundColor", "#ffffff");
     $("header").css("height", "100px");
-    $("header").css("boxShadow", "#536c8f 0px 0px 5px 2px");
     $(".gnb>li:not(li:last-child)").css("fontWeight", "400");
     $(".gnb>li:last-child").css("color", "#386aae");
     $(".header_wrap").css("height", "100px");
@@ -123,9 +139,12 @@ $(document).ready(function () {
   const headerUnder100 = () => {
     $("header").css("backgroundColor", "transparent");
     $("header").css("height", "140px");
-    $("header").css("boxShadow", "none");
     $(".gnb>li").css("fontWeight", "700");
     $(".gnb>li:last-child").css("color", "#305488");
     $(".header_wrap").css("height", "140px");
+  };
+  const franchiseToggle = () => {
+    $(".franchise").fadeToggle(500);
+    $(".aside_guide").hide(200);
   };
 });

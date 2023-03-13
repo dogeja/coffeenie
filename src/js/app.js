@@ -12,6 +12,8 @@ $(document).ready(function () {
   ///////////////   Responsive web width.callback()//////////////////////
   $(window)
     .resize(function () {
+      $(".gnb_mobile_ul").hide();
+
       //////////////DeskTop Size/////////////////
       if (window.innerWidth > 1024) {
         $(".news_wrap>div>ul").slick({
@@ -36,6 +38,17 @@ $(document).ready(function () {
         });
         //////////////Tablet Size/////////////////
       } else if (window.innerWidth <= 1024 && window.innerWidth > 768) {
+        $(".news_wrap>div>ul").slick({
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 1500,
+          speed: 500,
+          arrows: false,
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          vertical: true,
+          verticalSwiping: true,
+        });
         $(window).scroll(function () {
           const currentScrollValue = document.documentElement.scrollTop;
 
@@ -60,7 +73,6 @@ $(document).ready(function () {
         $("header").css("backgroundColor", "#ffffff");
         $("header").css("height", "100px");
         $(".header_wrap").css("height", "100px");
-        $(".gnb_mobile_ul").hide();
         $(".gnb_mobile")
           .off("click")
           .on("click", function () {
